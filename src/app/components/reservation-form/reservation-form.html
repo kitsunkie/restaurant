@@ -1,0 +1,96 @@
+<div class="container"> 
+  <header class="header">
+    <h1 class="header">Kirschblüte</h1>
+    <nav>
+      <ul class="nav ul">
+        <a [routerLink] = "['/menu']" >Speisekarte</a>
+        <b [routerLink] = "['/reservation']" >Reservieren</b>
+        <a [routerLink] = "['/hours']"> Öffnungzeiten</a>
+        <a [routerLink] = "['/arrival']"> Ankunft</a>
+      </ul>
+    </nav>
+  </header>
+
+  <br>
+
+<section>
+  <p class = "p2"><u>Reservierung vornehmen</u></p>
+  <br>
+
+  <form [formGroup]="reservationForm" class = "p4">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput id="name" formControlName = "name" placeholder="Max Mustermann" required>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" required>
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+
+   <!-- <mat-form-field>
+      <mat-label>Datum</mat-label>
+      <input matInput id="date" formControlName = "date" placeholder="dd.MM.yyyy" required>
+    </mat-form-field>  -->
+
+    <br>
+
+    <!-- <mat-form-field>
+      <mat-label>Pick a time</mat-label>
+      <input matInput [matTimepicker]="picker">
+      <mat-timepicker-toggle matIconSuffix [for]="picker"/>
+      <mat-timepicker #picker/>
+    </mat-form-field> -->
+
+
+    <mat-form-field>
+      <mat-label>Uhrzeit</mat-label>
+      <input matInput id="time" formControlName = "time" placeholder="13:30" required>
+      </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+      <mat-label>Anzahl Personen</mat-label>
+      <input matInput id="persons" formControlName = "persons" placeholder="1-8" required>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+      <mat-label>Sonstiges</mat-label>
+      <input matInput id="sonstiges" formControlName = "sonstiges">
+    </mat-form-field>
+
+    <p class="p4">Felder mit * müssen ausgefüllt werden</p>
+    <br>
+    <br>
+    <a>
+      <button matButton="filled" (click)="save()"> Jetzt Reservieren </button>
+    </a>
+  </form>
+</section>
+  
+<br>
+
+  <footer class="footer">
+    <h3 class=" header h1"> </h3>
+    <div class="contact">
+      <p><strong>Kontakt:</strong></p>
+      <p>Email: info&#64;kirschbluete.de</p>
+      <p>Telefon: +49 176 87246120</p>
+      <p>Adresse: Kirschblütenweg 22, 90421 Nürnberg </p>
+      <br>
+    </div>
+    <p>&copy; 2024 KirschblüteGmbH</p>
+  </footer>
+
+
+
+</div>

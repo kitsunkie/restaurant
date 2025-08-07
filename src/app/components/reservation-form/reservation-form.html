@@ -41,18 +41,20 @@
 
     <br>
 
-    <!-- <mat-form-field>
+     <!-- <mat-form-field>
       <mat-label>Pick a time</mat-label>
       <input matInput [matTimepicker]="picker">
-      <mat-timepicker-toggle matIconSuffix [for]="picker"/>
+      <mat-timepicker-toggle matIconSuffix [for]="picker">
+        <mat-icon matTimepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      </mat-timepicker-toggle>
       <mat-timepicker #picker/>
     </mat-form-field> -->
 
 
-    <mat-form-field>
+     <mat-form-field>
       <mat-label>Uhrzeit</mat-label>
       <input matInput id="time" formControlName = "time" placeholder="13:30" required>
-      </mat-form-field>
+      </mat-form-field> 
 
     <br>
 

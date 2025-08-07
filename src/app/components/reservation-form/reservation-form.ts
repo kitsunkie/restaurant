@@ -13,6 +13,7 @@ import { MatDatepickerModule, MatDatepicker } from '@angular/material/datepicker
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTimepicker } from '@angular/material/timepicker';
+import { provideNativeDateAdapter } from '@angular/material/core';
 
 
 
@@ -22,7 +23,7 @@ import { MatTimepicker } from '@angular/material/timepicker';
   selector: 'app-reservation-form',
   templateUrl: './reservation-form.html',
   styleUrls: ['./reservation-form.css'],
-  imports: [ReactiveFormsModule, RouterLink, MatFormField, MatInputModule, MatButton, MatDatepicker,  MatFormFieldModule, MatNativeDateModule, MatIconModule, MatDatepickerModule, /*MatTimepicker*/ ]
+  imports: [ReactiveFormsModule, RouterLink, MatFormField, MatInputModule, MatButton, MatDatepicker,  MatFormFieldModule, MatNativeDateModule, MatIconModule, MatDatepickerModule ]
 })
 
 export class ReservationForm {

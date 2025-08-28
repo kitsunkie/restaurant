@@ -43,7 +43,6 @@
     "typescript": "~5.8.2"
   },
   "scripts": {
-  ...
   "build:ssr": "ng build && ng run restaurant:server",
   "serve:ssr:restaurant": "node dist/restaurant/server/main.js"
 }
